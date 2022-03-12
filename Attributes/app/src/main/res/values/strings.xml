@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Attributes</string>
+    <string name="button_black">Черный текст</string>
+    <string name="button_red">Красный текст</string>
+    <string name="button_8sp">Размер - 8sp</string>
+    <string name="button_24sp">Размер - 24sp</string>
+    <string name="button_white">Белый фон</string>
+    <string name="button_yellow">Желтый фон</string>
+</resources>
