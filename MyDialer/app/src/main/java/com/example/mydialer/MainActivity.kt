@@ -39,21 +39,10 @@ class MainActivity : AppCompatActivity() {
                 adapter.updateData(contacts)
             } else {
 
-                var contactsFound: Array<Contact> = emptyArray()
-
-                for (contact in contacts) {
-                    when {
-                        contact.name.uppercase().contains(text_search) -> {
-                            contactsFound += contact
-                        }
-                        contact.phone.uppercase().contains(text_search) -> {
-                            contactsFound += contact
-                        }
-                        contact.type.uppercase().contains(text_search) -> {
-                            contactsFound += contact
-                        }
-                    }
-                }
+                val contactsFound: Array<Contact> = contacts.filter { contact -> (contact.name.uppercase().contains(text_search)
+                        || contact.phone.uppercase().contains(text_search)
+                        || contact.type.uppercase().contains(text_search))
+                }.toTypedArray()
 
                 adapter.updateData(contactsFound)
             }
